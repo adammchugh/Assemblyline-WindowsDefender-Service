@@ -44,6 +44,6 @@ heuristics:
 #  - the name of the docker container that will be created
 #  - cpu and ram allocation by the container
 docker_config:
-  image: localhost:5000/windowsdefender:latest
+  image: adammchugh/assemblyline-service-windowsdefender
   cpu_cores: 0.25
   ram_mb: 256
