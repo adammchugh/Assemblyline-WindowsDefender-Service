@@ -26,7 +26,7 @@ class WindowsDefender(ServiceBase):
         timeout = self.service_attributes.timeout-5
 
         try:
-            mpclient = subprocess.run(["/opt/al_service/mpclient", file_path], timeout=max(timeout+start-time.time(), 5), stdout=PIPE, stderr=PIPE, universal_newlines=True)
+            mpclient = subprocess.run(["/opt/al_service/loadlibrary/mpclient", file_path], timeout=max(timeout+start-time.time(), 5), stdout=PIPE, stderr=PIPE, universal_newlines=True)
         except TimeoutExpired:
             mpclient.kill()
             mpclient.stdout.close()
