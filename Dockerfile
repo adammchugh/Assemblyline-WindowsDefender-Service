@@ -23,8 +23,8 @@ RUN pip3 install --no-cache-dir --user -r requirements.txt && rm -rf ~/.cache/pi
 WORKDIR /opt/al_service/loadlibrary
 RUN git clone https://github.com/taviso/loadlibrary .
 RUN make
-RUN mv /opt/al_service/loadlibrary/mpclient /opt/al_service/loadlibrary/mpclient_old
-COPY mpclient .
+#RUN mv /opt/al_service/loadlibrary/mpclient /opt/al_service/loadlibrary/mpclient_old
+#COPY mpclient .
 RUN chmod +x /opt/al_service/loadlibrary/mpclient
 RUN ls -l /opt/al_service/loadlibrary
 
